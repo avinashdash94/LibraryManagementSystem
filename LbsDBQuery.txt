@@ -1,0 +1,69 @@
+**************Library Management System DataBase Creation Query*********
+1) Schema 
+	CREATE SCHEMA `librarysystem` ;
+2)Account(signup.java)
+	CREATE TABLE `librarysystem`.`account` (
+  `Username` CHAR(45) NOT NULL,
+  `Name` CHAR(45) NULL,
+  `Password` INT NULL,
+  `SecQ` CHAR(150) NULL,
+  `Answer` CHAR(10) NULL,
+  PRIMARY KEY (`Username`));
+
+3)NewBook
+	CREATE TABLE `librarysystem`.`book` (
+  `BookId` INT NOT NULL,
+  `Name` CHAR(45) NULL,
+  `Edition` INT NULL,
+  `Publisher` CHAR(45) NULL,
+  `Price` INT NULL,
+  `Pages` INT NULL,
+  PRIMARY KEY (`BookId`));
+
+4)New Student
+	CREATE TABLE `librarysystem`.`student` (
+  `StudentID` INT NOT NULL,
+  `Name` CHAR(45) NULL,
+  `Father` CHAR(45) NULL,
+  `Course` CHAR(45) NULL,
+  `Branch` CHAR(45) NULL,
+  `Year` INT NULL,
+  `Semester` INT NULL,
+  PRIMARY KEY (`StudentID`));
+5)Issue
+	CREATE TABLE `librarysystem`.`issue` (
+  `BookID` INT NOT NULL,
+  `Name` CHAR(45) NULL,
+  `Edition` INT NULL,
+  `Publisher` CHAR(45) NULL,
+  `Price` INT NULL,
+  `Pages` INT NULL,
+  `StudentID` INT NOT NULL,
+  `SName` CHAR(45) NULL,
+  `FName` CHAR(45) NULL,
+  `Course` CHAR(45) NULL,
+  `Branch` CHAR(45) NULL,
+  `Year` CHAR(45) NULL,
+  `Semester` INT NULL,
+  `DateOfIssue`  CHAR(45) NULL);
+
+6)Return1 
+	CREATE TABLE `librarysystem`.`return1` (
+  `StudentID` INT NOT NULL,
+  `Name` CHAR(45) NULL,
+  `FName` CHAR(45) NULL,
+  `Course` CHAR(45) NULL,
+  `Branch` CHAR(45) NULL,
+  `Year` CHAR(45) NULL,
+  `Semester` INT NULL,
+  `BookID` INT NULL,
+  `BName` CHAR(45) NULL,
+  `Edition` INT NULL,
+  `Publisher` CHAR(45) NULL,
+  `Price` INT NULL,
+  `Pages` INT NULL,
+  `DOI` CHAR(45) NULL,
+  `DOR` CHAR(45) NULL,
+  PRIMARY KEY (`StudentID`));
+
+
